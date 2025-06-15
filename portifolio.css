@@ -1,0 +1,215 @@
+@font-face {
+  font-family: 'Kingthings Petrock';
+  src: url('fontes/Kingthings_Petrock.ttf') format('truetype');
+}
+
+@font-face{
+  font-family: 'Kingthings Petrock Ligth';
+  src: url('fontes/Kingthings_Petrock_light.ttf') format('truetype');
+
+
+
+}
+
+body{
+
+background-color: black;
+
+}
+
+h1{
+font-size: 40px;
+font-family: 'Kingthings Petrock';
+}
+
+h2{
+position: relative;
+left: 10px;
+font-family: 'Kingthings Petrock';
+font-size: 28px;
+}
+
+p{
+font-family: 'Kingthings Petrock Ligth';
+position: relative;
+left: 10px;
+font-size: 24px
+
+}
+
+
+.barradeseleção{
+
+position: fixed;
+justify-content: center;
+display: flex;
+color: black;
+padding: 0px;
+margin: 0px;
+border: 0px;
+top: 1rem;
+left: 15%;
+width: 70%;
+height: 4.5rem;
+background-color: whitesmoke;
+text-align: center;
+
+}
+
+.imagens{
+
+border: 0px;
+margin: 0px;
+padding: 0px;
+
+
+
+}
+
+.imagem {
+  flex: 1 1 auto;
+  width: 40%;
+  object-fit: cover; 
+  object-position: center; 
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+  background-color: whitesmoke;
+}
+
+.imagem:hover{
+
+ background-color: rgb(180, 176, 176);
+
+}
+
+.blocoDoTitulo{
+
+  height: 15%;
+  background-color: aqua;
+  justify-content: center;
+  display: flex;
+
+}
+
+/*------------------------Menu Inicial--------------------*/
+
+.menuInicial{
+position: absolute;
+background-color: wheat;
+height: 80%;
+width: 70%;
+left: 15%;
+top: 5.5rem;
+
+}
+
+.divisoesMenuInicial{
+margin-top: 1%;
+margin-bottom: 1%;
+margin-left: 15%;
+background-color: white;
+height: 25%;
+width: 70%;
+border-bottom: 1px solid black;
+
+}
+
+.conteudotextomenuInicial{
+
+background-color: wheat;
+position: absolute;
+height: 65%;
+left: 130px;
+top: 15%;
+width: 74%;
+
+}
+
+.imangensdivmenuInicial{
+
+position: relative;
+height: 85%;
+left: 10px;
+top: 13%;
+
+}
+
+.divisoesMenuInicial {
+  position: relative;
+  padding-bottom: 1px;
+}
+
+.divisoesMenuInicial::after {
+  
+  content: "";                                 
+  position: absolute;                         
+  bottom: 0;                                   
+  left: 0;
+  width: 100%;                                 
+  height: 1px;                                  
+  background: linear-gradient(to right, transparent, #000000, transparent);
+  opacity: 0.7;  
+
+}
+
+/* ---------------------------Menu de Projetos------------------- */
+
+.MenuProjetos{
+
+height: 85%;
+width: 100%;
+top: 15%;
+position: absolute;
+background-color: aquamarine;
+overflow-y: auto;
+visibility: hidden;
+
+
+
+}
+
+.listaProjetos{
+
+display: none;
+gap: 1px;
+flex-direction: column;
+padding: 5px;
+
+
+
+}
+
+.listaProjetos-li{
+
+height: 60px;
+width: 98%;  
+border-bottom :4px black  ;
+padding-left:0px;
+margin-left:0px;
+position: relative;
+background-color: aliceblue;
+list-style-type: none;
+visibility: visible;
+
+}
+
+.listaProjetos-li:hover{
+
+background-color: rgb(221, 228, 235);
+ 
+}
+
+.listaProjetos-a{
+margin: 0px;
+gap: 0px;
+padding: 10px;
+}
+
+.listaProjetos-p{
+
+font-size: 20px;
+margin: 0px;
+
+
+}

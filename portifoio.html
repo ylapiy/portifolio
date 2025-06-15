@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ygor Jivago Leal Félix</title>
+    <link rel="stylesheet" href="portifolio.css">
+</head>
+<body>
+
+    <div class="barradeseleção">
+        <button class="imagem" id="butaoSobreMim">EU<img src="" alt="" height="100%" width="100%" class="imagens" ></button>
+        <button class="imagem" id="butaoProjetos">Projetos<img src="" alt="" height="100%" width="100%" class="imagens" ></button>
+        <button class="imagem" id="butaoSobraMais"">+<img src="" alt="" height="100%" width="100%" class="imagens" ></button>
+    </div>
+    <div class="menuInicial">
+        <div class="blocoDoTitulo">
+                <h1>YGOR JIVAGO LEAL FÉLIX</h1>
+
+        </div>
+        <div class="divisoesMenuInicial">
+            <img src="" alt="" height="70" width="100" class="imangensdivmenuInicial">
+                <div class="conteudotextomenuInicial">
+                    <h2>Curso</h2>
+                    <p>Engenharia de Software - Icev</p>
+                </div>
+        </div>
+        <div class="divisoesMenuInicial">
+            <img src="" alt="" height="70" width="100" class="imangensdivmenuInicial" >
+            <div class="conteudotextomenuInicial">
+                <h2>Habilidades</h2>
+                <p>abbbbbbbbbbbbbb</p>
+            </div>
+        </div>
+        <div class="divisoesMenuInicial">
+            <img src="" alt="" height="70" width="100" class="imangensdivmenuInicial">
+            <div class="conteudotextomenuInicial">
+                <h2>Contantos</h2>
+                <p>adadadadadadadadadada/dandadadadadadada</p>
+            </div>
+        </div>
+         
+        <!-------------------------------------------------------->
+
+        <div class="MenuProjetos" >
+
+            <ul class="listaProjetos" id="listaProjetos">
+                
+                
+            </ul>
+
+
+
+
+        </div>
+    
+
+    </div>
+
+<script>
+
+    document.getElementById('butaoSobreMim').addEventListener('click', () => {
+        document.querySelector('.MenuProjetos').style.visibility = 'hidden';
+        document.querySelector('.listaProjetos').style.display = 'none';
+        document.querySelectorAll('.divisoesMenuInicial').forEach(Elemento => {Elemento.style.visibility = 'visible'});
+        document.querySelector('h1').textContent = "YGOR JIVAGO LEAL FÉLIX";
+
+
+    })
+    document.getElementById('butaoProjetos').addEventListener('click', () => {
+        document.querySelector('.MenuProjetos').style.visibility = 'visible';
+        document.querySelector('.listaProjetos').style.display = 'flex';
+        document.querySelectorAll('.divisoesMenuInicial').forEach(Elemento => {Elemento.style.visibility = 'hidden'});
+        document.querySelector('h1').textContent = "PROJETOS";
+
+    })
+
+</script>
+
+
+<script>
+
+
+    const username = "ylapiy"; 
+    const lista = document.getElementById("listaProjetos");
+
+    fetch(`https://api.github.com/users/${username}/repos?sort=updated`)
+
+      .then(response => response.json())
+      .then(repos => {
+        lista.innerHTML = ""; 
+        repos.forEach(repo => {
+          const item = document.createElement("li");
+          item.classList.add("listaProjetos-li")
+          const link = document.createElement("a");
+          link.classList.add("listaProjetos-a")
+          const sobre = document.createElement("p");
+          sobre.classList.add("listaProjetos-p")
+          link.href = repo.html_url;
+          link.textContent = repo.name;
+          link.target = "_blank"; 
+          sobre.textContent = repo.language || "Outros"
+          item.appendChild(link);
+          lista.appendChild(item);
+          item.appendChild(sobre);
+
+        });
+      })
+      .catch(error => {
+        lista.innerHTML = "<li>Erro ao carregar repositórios</li>";
+        console.error(error);
+      });
+  
+
+</script>
+
+</body>
+</html>
