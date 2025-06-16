@@ -144,7 +144,8 @@ p {
   max-width: 1600px;
   max-height: 80vh;
   background-color: aquamarine;
-  overflow-y: auto;
+  overflow-y: scroll;
+  overflow-x: hidden;
   visibility: hidden;
   position: relative;
   padding: 2rem;
