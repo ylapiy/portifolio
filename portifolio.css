@@ -1,215 +1,212 @@
+/* Fontes */
 @font-face {
   font-family: 'Kingthings Petrock';
   src: url('fontes/Kingthings_Petrock.ttf') format('truetype');
 }
-
-@font-face{
+@font-face {
   font-family: 'Kingthings Petrock Ligth';
   src: url('fontes/Kingthings_Petrock_light.ttf') format('truetype');
-
-
-
 }
 
-body{
-
-background-color: black;
-
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: black;
+  font-family: 'Kingthings Petrock Ligth', sans-serif;
+  color: #000;
 }
 
-h1{
-font-size: 40px;
-font-family: 'Kingthings Petrock';
+/* Título */
+.blocoDoTitulo {
+  background-color: aqua;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+h1 {
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  font-family: 'Kingthings Petrock';
+  text-align: center;
 }
 
-h2{
-position: relative;
-left: 10px;
-font-family: 'Kingthings Petrock';
-font-size: 28px;
+/* Menu Inicial */
+.menuInicial {
+  background-color: wheat;
+  width: 80vw;
+  min-width: 300px;
+  max-width: 1600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00000055;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
 }
 
-p{
-font-family: 'Kingthings Petrock Ligth';
-position: relative;
-left: 10px;
-font-size: 24px
-
-}
-
-
-.barradeseleção{
-
-position: fixed;
-justify-content: center;
-display: flex;
-color: black;
-padding: 0px;
-margin: 0px;
-border: 0px;
-top: 1rem;
-left: 15%;
-width: 70%;
-height: 4.5rem;
-background-color: whitesmoke;
-text-align: center;
-
-}
-
-.imagens{
-
-border: 0px;
-margin: 0px;
-padding: 0px;
-
-
-
+.barradeseleção {
+  width: 100%;
+  height: 6.0rem;
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .imagem {
-  flex: 1 1 auto;
-  width: 40%;
-  object-fit: cover; 
-  object-position: center; 
-  border: 0px;
-  margin: 0px;
-  padding: 0px;
+  flex: 1;
+  height: 100%;
   background-color: whitesmoke;
-}
-
-.imagem:hover{
-
- background-color: rgb(180, 176, 176);
-
-}
-
-.blocoDoTitulo{
-
-  height: 15%;
-  background-color: aqua;
-  justify-content: center;
+  border: none;
+  padding: 0.2rem;
   display: flex;
-
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
 }
-
-/*------------------------Menu Inicial--------------------*/
-
-.menuInicial{
-position: absolute;
-background-color: wheat;
-height: 80%;
-width: 70%;
-left: 15%;
-top: 5.5rem;
-
+.imagem:hover {
+  background-color: rgb(180, 176, 176);
 }
-
-.divisoesMenuInicial{
-margin-top: 1%;
-margin-bottom: 1%;
-margin-left: 15%;
-background-color: white;
-height: 25%;
-width: 70%;
-border-bottom: 1px solid black;
-
-}
-
-.conteudotextomenuInicial{
-
-background-color: wheat;
-position: absolute;
-height: 65%;
-left: 130px;
-top: 15%;
-width: 74%;
-
-}
-
-.imangensdivmenuInicial{
-
-position: relative;
-height: 85%;
-left: 10px;
-top: 13%;
-
+.imagem img {
+  max-height: 90%;
+  max-width: 90%;
+  object-fit: contain;
 }
 
 .divisoesMenuInicial {
+  display: flex;
+  align-items: flex-start;
+  background-color: white;
+  min-height: 12rem;
+  margin-bottom: 1rem;
+  padding: 2rem 1rem;
+  border-bottom: 1px solid #ccc;
   position: relative;
-  padding-bottom: 1px;
+  width: 100%;
 }
-
 .divisoesMenuInicial::after {
-  
-  content: "";                                 
-  position: absolute;                         
-  bottom: 0;                                   
+  content: "";
+  position: absolute;
+  bottom: 0;
   left: 0;
-  width: 100%;                                 
-  height: 1px;                                  
+  width: 100%;
+  height: 1px;
   background: linear-gradient(to right, transparent, #000000, transparent);
-  opacity: 0.7;  
-
+  opacity: 0.7;
+}
+.imangensdivmenuInicial {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.conteudotextomenuInicial {
+  margin-left: 1rem;
+  flex: 1;
+}
+h2 {
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  margin-bottom: 0.3rem;
+  font-family: 'Kingthings Petrock';
+}
+p {
+  font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+  font-family: 'Kingthings Petrock Ligth';
 }
 
-/* ---------------------------Menu de Projetos------------------- */
-
-.MenuProjetos{
-
-height: 85%;
-width: 100%;
-top: 15%;
-position: absolute;
-background-color: aquamarine;
-overflow-y: auto;
-visibility: hidden;
-
-
-
+.habilidades-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding-top: 0.5rem;
+}
+.Imagensabilidades {
+  width: 40px;
+  height: auto;
 }
 
-.listaProjetos{
-
-display: none;
-gap: 1px;
-flex-direction: column;
-padding: 5px;
-
-
-
+.MenuProjetos {
+  width: 100%;
+  max-width: 1600px;
+  max-height: 80vh;
+  background-color: aquamarine;
+  overflow-y: auto;
+  visibility: hidden;
+  position: relative;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00000055;
+}
+.listaProjetos {
+  display: none;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.listaProjetos-li {
+  list-style: none;
+  background-color: aliceblue;
+  padding: 0.7rem;
+  border-bottom: 3px solid black;
+  transition: background-color 0.2s ease;
+}
+.listaProjetos-li:hover {
+  background-color: rgb(221, 228, 235);
+}
+.listaProjetos-a {
+  font-size: 1rem;
+  text-decoration: none;
+  color: black;
+}
+.listaProjetos-p {
+  font-size: 0.9rem;
 }
 
-.listaProjetos-li{
+@media (max-width: 768px) {
+  .barradeseleção {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 0.5rem;
+  }
 
-height: 60px;
-width: 98%;  
-border-bottom :4px black  ;
-padding-left:0px;
-margin-left:0px;
-position: relative;
-background-color: aliceblue;
-list-style-type: none;
-visibility: visible;
+  .imagem {
+    flex: 1 0 30%;
+    height: 3.5rem;
+  }
 
-}
+  .blocoDoTitulo h1 {
+    font-size: 1.8rem;
+  }
 
-.listaProjetos-li:hover{
+  .divisoesMenuInicial {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 
-background-color: rgb(221, 228, 235);
- 
-}
+  .imangensdivmenuInicial {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 0.5rem;
+  }
 
-.listaProjetos-a{
-margin: 0px;
-gap: 0px;
-padding: 10px;
-}
+  .conteudotextomenuInicial {
+    margin-left: 0;
+    width: 100%;
+  }
 
-.listaProjetos-p{
+  h2 {
+    font-size: 2rem;
+  }
 
-font-size: 20px;
-margin: 0px;
-
-
+  p {
+    font-size: 1.5rem;
+  }
 }

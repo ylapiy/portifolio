@@ -9,9 +9,9 @@
 <body>
 
     <div class="barradeseleção">
-        <button class="imagem" id="butaoSobreMim">EU<img src="" alt="" height="100%" width="100%" class="imagens" ></button>
-        <button class="imagem" id="butaoProjetos">Projetos<img src="" alt="" height="100%" width="100%" class="imagens" ></button>
-        <button class="imagem" id="butaoSobraMais"">+<img src="" alt="" height="100%" width="100%" class="imagens" ></button>
+        <button class="imagem" id="butaoSobreMim"><img src="" alt="" height="100%" width="100%" class="imagens" ></button>
+        <button class="imagem" id="butaoProjetos"><img src="" alt="" height="100%" width="100%" class="imagens" ></button>
+        <button class="imagem" id="butaoSobraMais""><img src="" alt="" height="100%" width="100%" class="imagens" ></button>
     </div>
     <div class="menuInicial">
         <div class="blocoDoTitulo">
@@ -29,14 +29,14 @@
             <img src="" alt="" height="70" width="100" class="imangensdivmenuInicial" >
             <div class="conteudotextomenuInicial">
                 <h2>Habilidades</h2>
-                <p>abbbbbbbbbbbbbb</p>
+                <p><img src="imagens\Sprite-c icone.png" class="Imagensabilidades"> <img src="imagens\Sprite-javafundopreto.png" class="Imagensabilidades"> <img src="imagens\Sprite-pytomba.png" class="Imagensabilidades"> <img src="imagens\Sprite-iconegamermaker.png" class="Imagensabilidades">  <img src="imagens\Sprite-html icone.png" class="Imagensabilidades"> <img src="imagens\Sprite-javascripticone.png" class="Imagensabilidades"> <img src="imagens\Sprite-css icon.png" class="Imagensabilidades"> 
             </div>
         </div>
         <div class="divisoesMenuInicial">
             <img src="" alt="" height="70" width="100" class="imangensdivmenuInicial">
             <div class="conteudotextomenuInicial">
                 <h2>Contantos</h2>
-                <p>adadadadadadadadadada/dandadadadadadada</p>
+                <p>oi</p>
             </div>
         </div>
          
@@ -45,12 +45,7 @@
         <div class="MenuProjetos" >
 
             <ul class="listaProjetos" id="listaProjetos">
-                
-                
             </ul>
-
-
-
 
         </div>
     
@@ -63,6 +58,7 @@
         document.querySelector('.MenuProjetos').style.visibility = 'hidden';
         document.querySelector('.listaProjetos').style.display = 'none';
         document.querySelectorAll('.divisoesMenuInicial').forEach(Elemento => {Elemento.style.visibility = 'visible'});
+        document.querySelectorAll('.divisoesMenuInicial').forEach(Elemento => {Elemento.style.display = 'flex'});
         document.querySelector('h1').textContent = "YGOR JIVAGO LEAL FÉLIX";
 
 
@@ -71,6 +67,7 @@
         document.querySelector('.MenuProjetos').style.visibility = 'visible';
         document.querySelector('.listaProjetos').style.display = 'flex';
         document.querySelectorAll('.divisoesMenuInicial').forEach(Elemento => {Elemento.style.visibility = 'hidden'});
+        document.querySelectorAll('.divisoesMenuInicial').forEach(Elemento => {Elemento.style.display = 'none'});
         document.querySelector('h1').textContent = "PROJETOS";
 
     })
