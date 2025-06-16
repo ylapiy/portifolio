@@ -15,7 +15,7 @@
     </div>
     <div class="menuInicial">
         <div class="blocoDoTitulo">
-                <h1>YGOR JIVAGO LEAL FÉLIX</h1>
+                <h1 id="titulo">YGOR JIVAGO LEAL FÉLIX</h1>
 
         </div>
         <div class="divisoesMenuInicial">
@@ -59,7 +59,9 @@
         document.querySelector('.listaProjetos').style.display = 'none';
         document.querySelectorAll('.divisoesMenuInicial').forEach(Elemento => {Elemento.style.visibility = 'visible'});
         document.querySelectorAll('.divisoesMenuInicial').forEach(Elemento => {Elemento.style.display = 'flex'});
-        document.querySelector('h1').textContent = "YGOR JIVAGO LEAL FÉLIX";
+        document.getElementById('titulo').textContent = ""
+        escreverTextoProgresso('titulo','YGOR JIVAGO LEAL FÉLIX')
+        
 
 
     })
@@ -68,7 +70,8 @@
         document.querySelector('.listaProjetos').style.display = 'flex';
         document.querySelectorAll('.divisoesMenuInicial').forEach(Elemento => {Elemento.style.visibility = 'hidden'});
         document.querySelectorAll('.divisoesMenuInicial').forEach(Elemento => {Elemento.style.display = 'none'});
-        document.querySelector('h1').textContent = "PROJETOS";
+        document.getElementById('titulo').textContent = ""
+        escreverTextoProgresso('titulo','PROJETOS')
 
     })
 
@@ -107,7 +110,31 @@
         lista.innerHTML = "<li>Erro ao carregar repositórios</li>";
         console.error(error);
       });
-  
+
+
+ let timer = null;
+
+function escreverTextoProgresso(elementoId, texto, velocidade = 80) {
+    const elemento = document.getElementById(elementoId);
+    let i = 0;
+
+    if (timer) {
+        clearTimeout(timer);
+    }
+
+    elemento.textContent = ''; 
+
+    function digitar() {
+        if (i < texto.length) {
+            elemento.textContent += texto.charAt(i);
+            i++;
+            timer = setTimeout(digitar, velocidade);
+        }
+    }
+
+    digitar();
+}
+
 
 </script>
 

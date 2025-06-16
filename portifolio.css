@@ -36,7 +36,7 @@ h1 {
 
 /* Menu Inicial */
 .menuInicial {
-  background-color: wheat;
+  background-color: #f5deb3;
   width: 80vw;
   min-width: 300px;
   max-width: 1600px;
@@ -84,7 +84,7 @@ h1 {
 .divisoesMenuInicial {
   display: flex;
   align-items: flex-start;
-  background-color: white;
+  background-color: #dfc9a1;
   min-height: 12rem;
   margin-bottom: 1rem;
   padding: 2rem 1rem;
@@ -92,6 +92,12 @@ h1 {
   position: relative;
   width: 100%;
 }
+.divisoesMenuInicial:hover {
+  scale: 1.02;
+  background-color: #d4c099;
+}
+
+
 .divisoesMenuInicial::after {
   content: "";
   position: absolute;
@@ -159,6 +165,7 @@ p {
 }
 .listaProjetos-li:hover {
   background-color: rgb(221, 228, 235);
+   scale: 1.02;
 }
 .listaProjetos-a {
   font-size: 1rem;
