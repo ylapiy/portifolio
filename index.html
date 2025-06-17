@@ -11,7 +11,6 @@
     <div class="barradeseleção">
         <button class="imagem" id="butaoSobreMim"><img src="imagens\botao-de-inicio.png" alt="" height="100%" width="100%" class="imagens" ></button>
         <button class="imagem" id="butaoProjetos"><img src="imagens\github.png" alt="" height="100%" width="100%" class="imagens" ></button>
-        <button class="imagem" id="butaoSobraMais""><img src="imagens\mais.png" alt="" height="100%" width="100%" class="imagens" ></button>
     </div>
     <div class="menuInicial">
         <div class="blocoDoTitulo">
@@ -42,7 +41,27 @@
                 <p>Telefone - +55(86)994822455</p>
             </div>
         </div>
-         
+        <div class="divisoesMenuInicial">
+                <div class="conteudotextomenuInicial">
+                   <h2>Sou Ygor Jivago</h2>
+                    <p>Tenho 20 anos e tenho um sonho de desenvolver jogos</p>
+                    <P>simplismente porque eles fazem as pessoas felizes e eu quero dar essa felicidade a outros</P>
+                </div>
+        </div>
+        <div class="divisoesMenuInicial">
+                <div class="conteudotextomenuInicial">
+                   <form id="formemai" action="https://formsubmit.co/ygorgivagooo@gmail.com" method="POST" target="formFrame">
+                <label for="mensagem">Quer entrar em contanto, mande um e-mail :</label><br>
+                <textarea id="mensagem" name="mensagem" rows="5" cols="55" required></textarea><br><br>
+
+                <input type="text" name="_honey" style="display:none">
+                <input type="hidden" name="_captcha" value="false">
+
+                <button type="submit" id="email" class="Bemail">Enviar Email</button>
+            </form>
+        <iframe name="formFrame" style="display:none;"></iframe>
+                </div>
+        </div>
         <!-------------------------------------------------------->
 
         <div class="MenuProjetos" >
@@ -54,27 +73,6 @@
 
         <!-------------------------------------------------------->
 
-        <div class="MenuSobreMim">
-                <div class="divisoesMenumim">
-                    <h2>Sou Ygor Jivago</h2>
-                    <p>Tenho 20 anos e tenho um sonho de desenvolver jogos</p>
-                    <P>simplismente porque eles fazem as pessoas felizes e eu quero dar essa felicidade a outros</P>
-                </div>
-
-
-        <div class="divisoesMenumim">
-            <form id="formemai" action="https://formsubmit.co/34094d6d84f766c6f192c602cb3a4cf0" method="POST" target="formFrame">
-                <label for="mensagem">Quer entrar em contanto, mande um e-mail :</label><br>
-                <textarea id="mensagem" name="mensagem" rows="5" cols="55" required></textarea><br><br>
-
-                <input type="text" name="_honey" style="display:none">
-                <input type="hidden" name="_captcha" value="false">
-
-                <button type="submit" id="email" class="Bemail">Enviar Email</button>
-            </form>
-        <iframe name="formFrame" style="display:none;"></iframe>
-        </div>
-        </div>
 
     </div>
 
@@ -103,18 +101,6 @@
         document.querySelector('.MenuSobreMim').style.visibility = 'none'
         document.getElementById('titulo').textContent = ""
         escreverTextoProgresso('titulo','PROJETOS')
-
-    })
-    document.getElementById('butaoSobraMais').addEventListener('click', () =>{
-        document.querySelector('.MenuProjetos').style.display = 'none'
-        document.querySelector('.MenuProjetos').style.visibility = 'hidden';
-        document.querySelector('.listaProjetos').style.display = 'none';
-        document.querySelectorAll('.divisoesMenuInicial').forEach(Elemento => {Elemento.style.visibility = 'hidden'});
-        document.querySelectorAll('.divisoesMenuInicial').forEach(Elemento => {Elemento.style.display = 'none'});
-        document.querySelector('.MenuSobreMim').style.visibility = 'visible'
-        document.querySelector('.MenuSobreMim').style.display = 'flex'
-        document.getElementById('titulo').textContent = ""
-        escreverTextoProgresso('titulo','SOBRE MIM')
 
     })
 
