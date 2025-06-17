@@ -51,7 +51,34 @@
             </ul>
 
         </div>
-    
+
+        <!-------------------------------------------------------->
+
+        <div class="MenuSobreMim">
+                <div class="divisoesMenumim">
+                    <h2>Sou Ygor Jivago</h2>
+                    <p>Tenho 20 anos e tenho um sonho de desenvolver jogos</p>
+                    <P>simplismente porque eles fazem as pessoas felizes e eu quero dar essa felicidade a outros</P>
+                </div>
+
+
+        <div class="divisoesMenumim">
+            <form id="formemai" action="https://formsubmit.co/34094d6d84f766c6f192c602cb3a4cf0" method="POST" target="formFrame">
+            <label for="mensagem">Quer etrar em contanto, mande um e-mail :</label><br>
+            <input type="email" name="email" id="campodeemail" required placeholder="Digite aqui seu emai, para resposta">
+            <textarea id="mensagem" name="mensagem" rows="5" cols="55" required></textarea><br><br>
+
+            <input type="text" name="_honey" style="display:none">
+            <input type="hidden" name="_captcha" value="false">
+
+            <button type="submit" id="email" class="Bemail">Enviar Email</button>
+        </form>
+
+        <iframe name="formFrame" style="display:none;"></iframe>
+
+
+        </div>
+        </div>
 
     </div>
 
@@ -62,6 +89,8 @@
         document.querySelector('.listaProjetos').style.display = 'none';
         document.querySelectorAll('.divisoesMenuInicial').forEach(Elemento => {Elemento.style.visibility = 'visible'});
         document.querySelectorAll('.divisoesMenuInicial').forEach(Elemento => {Elemento.style.display = 'flex'});
+        document.querySelector('.MenuProjetos').style.visibility = 'hidden'
+        document.querySelector('.MenuProjetos').style.visibility = 'none'
         document.getElementById('titulo').textContent = ""
         escreverTextoProgresso('titulo','YGOR JIVAGO LEAL FÉLIX')
         
@@ -70,13 +99,30 @@
     })
     document.getElementById('butaoProjetos').addEventListener('click', () => {
         document.querySelector('.MenuProjetos').style.visibility = 'visible';
+        document.querySelector('.MenuProjetos').style.display = 'block'
         document.querySelector('.listaProjetos').style.display = 'flex';
         document.querySelectorAll('.divisoesMenuInicial').forEach(Elemento => {Elemento.style.visibility = 'hidden'});
         document.querySelectorAll('.divisoesMenuInicial').forEach(Elemento => {Elemento.style.display = 'none'});
+        document.querySelector('.MenuSobreMim').style.visibility = 'hidden'
+        document.querySelector('.MenuSobreMim').style.visibility = 'none'
         document.getElementById('titulo').textContent = ""
         escreverTextoProgresso('titulo','PROJETOS')
 
     })
+    document.getElementById('butaoSobraMais').addEventListener('click', () =>{
+        document.querySelector('.MenuProjetos').style.display = 'none'
+        document.querySelector('.MenuProjetos').style.visibility = 'hidden';
+        document.querySelector('.listaProjetos').style.display = 'none';
+        document.querySelectorAll('.divisoesMenuInicial').forEach(Elemento => {Elemento.style.visibility = 'hidden'});
+        document.querySelectorAll('.divisoesMenuInicial').forEach(Elemento => {Elemento.style.display = 'none'});
+        document.querySelector('.MenuSobreMim').style.visibility = 'visible'
+        document.querySelector('.MenuSobreMim').style.display = 'flex'
+        document.getElementById('titulo').textContent = ""
+        escreverTextoProgresso('titulo','SOBRE MIM')
+
+    })
+
+
     window.addEventListener('load', () => {
         document.getElementById('titulo').textContent = ""
         escreverTextoProgresso('titulo','YGOR JIVAGO LEAL FÉLIX')

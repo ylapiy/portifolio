@@ -209,6 +209,7 @@ p {
   font-size: 1rem;
   color: #475569;
 }
+
 }
 
 .descricaoRepo {
@@ -223,4 +224,37 @@ p {
     font-size: 14px;
     display: none; /* Escondido até passar o mouse */
     z-index: 9999;
+}
+
+.MenuSobreMim{
+
+  width: 100%;
+  max-width: 1600px;
+  max-height: 80vh;
+  background-color: #ffffff;
+  visibility: hidden;
+  display: none;
+  position: relative;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  flex-direction: column;
+
+}
+
+.divisoesMenumim{
+
+  flex-direction: column;
+  display: flex;
+  align-items: flex-start;
+  background-color: #e2e8f0;
+  min-height: 12rem;
+  margin-bottom: 1rem;
+  padding: 2rem 1rem;
+  border-bottom: 2px solid #cbd5e1;
+  position: relative;
+  width: 100%;
+  border-radius: 20px;
+  transition: transform 0.2s ease;
+  
 }
