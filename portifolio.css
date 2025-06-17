@@ -1,49 +1,42 @@
-/* Fontes */
-@font-face {
-  font-family: 'Kingthings Petrock';
-  src: url('fontes/Kingthings_Petrock.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Kingthings Petrock Ligth';
-  src: url('fontes/Kingthings_Petrock_light.ttf') format('truetype');
-}
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans&display=swap');
 
-/* Reset básico */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
-  background-color: black;
-  font-family: 'Kingthings Petrock Ligth', sans-serif;
-  color: #000;
+  background-color: #f4f4f5;
+  font-family: 'Open Sans', sans-serif;
+  color: #1e293b;
 }
 
-/* Título */
 .blocoDoTitulo {
-  background-color: aqua;
+  background-color: #1e293b;
+  color: #f1f5f9;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 1rem;
+  border-radius: 5px;
 }
 h1 {
   font-size: clamp(1.8rem, 3vw, 3rem);
-  font-family: 'Kingthings Petrock';
+  font-family: 'Merriweather', serif;
   text-align: center;
 }
 
-/* Menu Inicial */
+
 .menuInicial {
-  background-color: #f5deb3;
+  background-color: #ffffff;
   width: 80vw;
   min-width: 300px;
   max-width: 1600px;
   margin: 2rem auto;
   padding: 2rem;
   border-radius: 10px;
-  box-shadow: 0 0 10px #00000055;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
   min-height: 90vh;
   display: flex;
   flex-direction: column;
@@ -51,29 +44,32 @@ h1 {
   gap: 1.5rem;
 }
 
+
 .barradeseleção {
   width: 100%;
-  height: 6.0rem;
-  background-color: whitesmoke;
+  height: 6rem;
+  background-color: #334155;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   gap: 0.5rem;
+  border-radius: 10px;
 }
-
 .imagem {
   flex: 1;
   height: 100%;
-  background-color: whitesmoke;
+  background-color: #334155;
   border: none;
   padding: 0.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: background-color 0.3s ease;
+  border-radius: 10px;
+  border: 1px solid #1e293b;
 }
 .imagem:hover {
-  background-color: rgb(180, 176, 176);
+  background-color: #475569;
 }
 .imagem img {
   max-height: 90%;
@@ -84,29 +80,19 @@ h1 {
 .divisoesMenuInicial {
   display: flex;
   align-items: flex-start;
-  background-color: #dfc9a1;
+  background-color: #e2e8f0;
   min-height: 12rem;
   margin-bottom: 1rem;
   padding: 2rem 1rem;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 2px solid #cbd5e1;
   position: relative;
   width: 100%;
+  border-radius: 20px;
+  transition: transform 0.2s ease;
 }
 .divisoesMenuInicial:hover {
-  scale: 1.02;
-  background-color: #d4c099;
-}
-
-
-.divisoesMenuInicial::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background: linear-gradient(to right, transparent, #000000, transparent);
-  opacity: 0.7;
+  transform: scale(1.02);
+  background-color: #cbd5e1;
 }
 .imangensdivmenuInicial {
   width: 80px;
@@ -121,19 +107,12 @@ h1 {
 h2 {
   font-size: clamp(1.3rem, 2.5vw, 1.8rem);
   margin-bottom: 0.3rem;
-  font-family: 'Kingthings Petrock';
+  font-family: 'Merriweather', serif;
 }
 p {
   font-size: clamp(1.2rem, 2.2vw, 1.6rem);
-  font-family: 'Kingthings Petrock Ligth';
 }
 
-.habilidades-lista {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  padding-top: 0.5rem;
-}
 .Imagensabilidades {
   width: 40px;
   height: auto;
@@ -143,14 +122,14 @@ p {
   width: 100%;
   max-width: 1600px;
   max-height: 80vh;
-  background-color: aquamarine;
+  background-color: #ffffff;
   overflow-y: scroll;
   overflow-x: hidden;
   visibility: hidden;
   position: relative;
   padding: 2rem;
   border-radius: 10px;
-  box-shadow: 0 0 10px #00000055;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 .listaProjetos {
   display: none;
@@ -158,23 +137,25 @@ p {
   gap: 0.5rem;
 }
 .listaProjetos-li {
+  border-radius: 20px;
   list-style: none;
-  background-color: aliceblue;
+  background-color: #f8fafc;
   padding: 0.7rem;
-  border-bottom: 3px solid black;
+  border-bottom: 3px solid #cbd5e1;
   transition: background-color 0.2s ease;
 }
 .listaProjetos-li:hover {
-  background-color: rgb(221, 228, 235);
-   scale: 1.02;
+  background-color: #e2e8f0;
+  transform: scale(1.02);
 }
 .listaProjetos-a {
   font-size: 1rem;
   text-decoration: none;
-  color: black;
+  color: #1e293b;
 }
 .listaProjetos-p {
   font-size: 0.9rem;
+  color: #475569;
 }
 
 @media (max-width: 768px) {
