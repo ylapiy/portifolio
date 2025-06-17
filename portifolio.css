@@ -196,6 +196,17 @@ p {
   }
 
   p {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
+
+  .listaProjetos-a {
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: #1e293b;
+ } 
+
+  .listaProjetos-p {
+  font-size: 1rem;
+  color: #475569;
+}
 }
