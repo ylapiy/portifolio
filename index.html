@@ -113,6 +113,17 @@
           lista.appendChild(item);
           item.appendChild(sobre);
 
+          item.addEventListener('mouseenter', () => {
+          const descricao = document.getElementById("descricaoRepo");
+          descricao.textContent = repo.description 
+          descricao.style.display = 'block';
+    });
+
+          item.addEventListener('mouseleave', () => {
+        const descricao = document.getElementById("descricaoRepo");
+        descricao.style.display = 'none';
+    });
+
         });
       })
       .catch(error => {
@@ -142,15 +153,11 @@ function escreverTextoProgresso(elementoId, texto, velocidade = 80) {
 
     digitar();
 }
-  
-document.querySelectorAll('.listaProjetos-li').forEach(item => {
-    item.addEventListener('mouseenter', () => {
-        console.log('sobre');
-    });
-});
 
 
 </script>
+
+<div id="descricaoRepo" class="descricaoRepo"></div>
 
 </body>
 </html>

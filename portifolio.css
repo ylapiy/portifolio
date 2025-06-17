@@ -210,3 +210,17 @@ p {
   color: #475569;
 }
 }
+
+.descricaoRepo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    max-width: 300px;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    display: none; /* Escondido até passar o mouse */
+    z-index: 9999;
+}
