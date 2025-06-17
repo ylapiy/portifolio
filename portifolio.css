@@ -209,6 +209,12 @@ p {
   font-size: 1rem;
   color: #475569;
 }
+textarea{
+
+box-sizing: ;
+
+
+}
 
 }
 
@@ -279,7 +285,9 @@ textarea {
   resize: vertical;
   font-family: Arial, sans-serif;
   min-height: 150px;
+  max-width: 70%;
   box-sizing: border-box;
+
 }
 
 
