@@ -44,15 +44,15 @@
             <div class="conteudotextomenuInicial">
                 <h2>Contantos</h2>
                 <p><a href="https://github.com/ylapiy" style="text-decoration:none" style="">Git Hub - ylapiy</p></a>
-                <p>Email - ygorgiavgooo@gmail.com</p>
+                <p>Email - ygorgivagooo@gmail.com</p>
                 <p>Telefone - +55(86)994822455</p>
             </div>
         </div>
 
         <div class="divisoesMenuInicial">
                 <div class="conteudotextomenuInicial">
-                   <form id="formemai" action="https://formsubmit.co/ygorgivagooo@gmail.com" method="POST" target="formFrame">
-                <label for="mensagem">Quer entrar em contanto, mande um e-mail :</label><br>
+                <form id="formemai" action="https://formsubmit.co/ygorgivagooo@gmail.com" method="POST" target="formFrame">
+                <label for="mensagem" id="campodeemail">Quer entrar em contanto, mande um e-mail :</label><br>
                 <textarea id="mensagem" name="mensagem" rows="5" cols="55" required></textarea><br><br>
 
                 <input type="text" name="_honey" style="display:none">
@@ -61,7 +61,7 @@
                 <button type="submit" id="email" class="Bemail">Enviar Email</button>
             </form>
         <iframe name="formFrame" style="display:none;"></iframe>
-                </div>
+        </div>
         </div>
         <!-------------------------------------------------------->
 
@@ -101,8 +101,10 @@
         escreverTextoProgresso('titulo','PROJETOS')
 
     })
-
-
+    document.getElementById('email').addEventListener('click', () => {
+        document.getElementById('formemai').mensagem.value = "";
+    })
+    
     window.addEventListener('load', () => {
         document.getElementById('titulo').textContent = ""
         escreverTextoProgresso('titulo','YGOR JIVAGO LEAL FÉLIX')
@@ -114,7 +116,6 @@
 
 
 <script>
-
 
     const username = "ylapiy"; 
     const lista = document.getElementById("listaProjetos");
