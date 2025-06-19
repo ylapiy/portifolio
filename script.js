@@ -52,7 +52,9 @@ document.getElementById('butaoProjetos').addEventListener('click', () => {
 
 })
 document.getElementById('email').addEventListener('click', () => {
-        document.getElementById('formemai').mensagem.value = "";
+    setTimeout(()=>{
+    document.getElementById('formemai').mensagem.value = "";
+    }, 100)
 })
 window.addEventListener('load', () => {
         document.getElementById('titulo').textContent = ""
