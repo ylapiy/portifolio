@@ -13,9 +13,13 @@
         <button class="imagem" id="butaoProjetos"><img src="imagens\github.png" alt="" height="100%" width="100%" class="imagens" ></button>
     </div>
     <div class="menuInicial">
+        <button type="button" id="inversor"><img src="" alt="">
+            <img src="imagens\bedtime_24dp_000000_FILL1_wght400_GRAD0_opsz24.svg" id="lua" >
+            <img src="imagens\clear_day_24dp_000000_FILL1_wght400_GRAD0_opsz24.svg" id="sol" style="visibility: hidden;display:none;">
+        </button>
         <div class="blocoDoTitulo">
                 <h1 id="titulo">YGOR JIVAGO LEAL FÉLIX</h1>
-                <button type="button" id="inversor"><img src="" alt=""></button>
+        
 
         </div>
         <div class="divisoesMenuInicial">
@@ -79,9 +83,30 @@
     </div>
 
 <script>
+    var temaClaro = false
 
     document.getElementById('inversor').addEventListener('click', () => {
         document.body.classList.toggle('tema-claro-queima-olhos')
+        const lua =  document.getElementById('lua')
+        const sol = document.getElementById('sol')
+
+        if(temaClaro == false){
+            
+            temaClaro = true
+            lua.style.display = "none"
+            lua.style.visibility = "hidden"
+            sol.style.display = "block"
+            sol.style.visibility = "visible"
+
+        }else{
+
+            temaClaro = false
+            sol.style.display = "none"
+            sol.style.visibility = "hidden"
+            lua.style.display = "block"
+            lua.style.visibility = "visible"
+        }
+
 
     })
     document.getElementById('butaoSobreMim').addEventListener('click', () => {
@@ -121,9 +146,6 @@
 
 
 </script>
-
-
-
 <script>
 
     const username = "ylapiy"; 

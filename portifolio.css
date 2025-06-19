@@ -39,6 +39,22 @@ body.tema-claro-queima-olhos{
   --scol-hover: rgb(206, 214, 219) ;
 }
 
+#inversor{
+
+height: 50px;
+width: 50px;
+position: relative;
+padding: 0px;
+top:0px;
+left: 0px;
+border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+position: absolute;
+background-color: var(--cor-bloco);
+
+}
 
 * {
   margin: 0;
@@ -135,6 +151,7 @@ form label {
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
   min-height: 90vh;
   display: flex;
+  position: relative;
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
