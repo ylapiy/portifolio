@@ -15,6 +15,7 @@
     <div class="menuInicial">
         <div class="blocoDoTitulo">
                 <h1 id="titulo">YGOR JIVAGO LEAL FÉLIX</h1>
+                <button type="button" id="inversor"><img src="" alt=""></button>
 
         </div>
         <div class="divisoesMenuInicial">
@@ -63,6 +64,7 @@
         <iframe name="formFrame" style="display:none;"></iframe>
         </div>
         </div>
+
         <!-------------------------------------------------------->
 
         <div class="MenuProjetos" >
@@ -78,13 +80,18 @@
 
 <script>
 
+    document.getElementById('inversor').addEventListener('click', () => {
+        document.body.classList.toggle('tema-claro-queima-olhos')
+
+    })
     document.getElementById('butaoSobreMim').addEventListener('click', () => {
         document.querySelector('.MenuProjetos').style.visibility = 'hidden';
+        document.querySelector('.MenuProjetos').style.visibility = 'none'
         document.querySelector('.listaProjetos').style.display = 'none';
+
         document.querySelectorAll('.divisoesMenuInicial').forEach(Elemento => {Elemento.style.visibility = 'visible'});
         document.querySelectorAll('.divisoesMenuInicial').forEach(Elemento => {Elemento.style.display = 'flex'});
-        document.querySelector('.MenuProjetos').style.visibility = 'hidden'
-        document.querySelector('.MenuProjetos').style.visibility = 'none'
+       
         document.getElementById('titulo').textContent = ""
         escreverTextoProgresso('titulo','YGOR JIVAGO LEAL FÉLIX')
         
@@ -92,11 +99,13 @@
 
     })
     document.getElementById('butaoProjetos').addEventListener('click', () => {
+        document.querySelectorAll('.divisoesMenuInicial').forEach(Elemento => {Elemento.style.visibility = 'hidden'});
+        document.querySelectorAll('.divisoesMenuInicial').forEach(Elemento => {Elemento.style.display = 'none'});
+       
         document.querySelector('.MenuProjetos').style.visibility = 'visible';
         document.querySelector('.MenuProjetos').style.display = 'block'
         document.querySelector('.listaProjetos').style.display = 'flex';
-        document.querySelectorAll('.divisoesMenuInicial').forEach(Elemento => {Elemento.style.visibility = 'hidden'});
-        document.querySelectorAll('.divisoesMenuInicial').forEach(Elemento => {Elemento.style.display = 'none'});
+        
         document.getElementById('titulo').textContent = ""
         escreverTextoProgresso('titulo','PROJETOS')
 
@@ -104,7 +113,6 @@
     document.getElementById('email').addEventListener('click', () => {
         document.getElementById('formemai').mensagem.value = "";
     })
-    
     window.addEventListener('load', () => {
         document.getElementById('titulo').textContent = ""
         escreverTextoProgresso('titulo','YGOR JIVAGO LEAL FÉLIX')
@@ -113,6 +121,7 @@
 
 
 </script>
+
 
 
 <script>
@@ -156,7 +165,6 @@
       .catch(error => {
         console.error(error);
       });
-
 
  let timer = null;
 

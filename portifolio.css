@@ -4,13 +4,41 @@
   --cor-fundo: #1e1e2f;
   --cor-secundaria: #2c2f48;
   --cor-destaque: #f0b429;
+  --cor-botao: #f0b429;
   --cor-hover: #d89e1f;
+  --cor-hover-image:#3e4a61;
+
   --cor-texto: #e5e7eb;
   --cor-texto-fraco: #94a3b8;
   --cor-link-fraco: #5f6f86;
   --cor-link-fraco-hover: #546377;
   --cor-bloco: #23263a;
+  --cor-li:#23263a;
+  --li-hover: #2e314d;
+
+  --scro: #383c5e;
+  --scol-hover:  #3b3f61;
+  
 }
+
+body.tema-claro-queima-olhos{
+  --cor-fundo: #f4f4f5; 
+  --cor-secundaria: #ffffff;
+  --cor-destaque: #f0b429;
+  --cor-hover: #1e293b;
+  --cor-botao: #1e293b;
+  --cor-texto: #1e293b;
+  --cor-hover-image:#849ecf;
+  --cor-texto-fraco: #94a3b8;
+  --cor-link-fraco: #5f6f86;
+  --cor-link-fraco-hover: #546377;
+  --cor-li: rgb(247, 242, 242);
+  --cor-bloco: #dfdfdf;
+  --li-hover: rgb(222, 230, 236);
+  --scro: rgb(222, 230, 236);
+  --scol-hover: rgb(206, 214, 219) ;
+}
+
 
 * {
   margin: 0;
@@ -18,14 +46,73 @@
   box-sizing: border-box;
 }
 
-body {
+html, body {
   background-color: var(--cor-fundo);
   font-family: 'Open Sans', sans-serif;
   color: var(--cor-texto);
 }
 
-h1, h2 {
+body::-webkit-scrollbar{width: 15px;}
+
+body::-webkit-scrollbar-track{background-color: var(--cor-bloco)}
+
+body::-webkit-scrollbar-thumb{
+  border-radius: 20px;
+  background-color: var(--li-hover)
+}
+
+body::-webkit-scrollbar-thumb:hover{background-color: var(--scol-hover)}
+
+h1 {
   font-family: 'Merriweather', serif;
+  font-size: clamp(2rem, 3vw, 3rem);
+  text-align: center;
+}
+
+h2 {
+  font-family: 'Merriweather', serif;
+  font-size: 1.6rem;
+  margin-bottom: 0.3rem;
+  color: var(--cor-destaque);
+}
+
+p {
+  font-size: 1.2rem;
+  color: var(--cor-texto-fraco);
+}
+
+a{
+ font-size :1.2rem;
+ color: var(--cor-link-fraco)
+}
+
+a:hover{
+ color: var(--cor-link-fraco-hover)
+
+}
+
+textarea {
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  resize: vertical;
+  font-family: Arial, sans-serif;
+  min-height: 150px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+textarea:focus {
+  border-color: var(--cor-destaque);
+  outline: none;
+}
+
+form label {
+  font-weight: bold;
+  color: var(--cor-texto);
+  margin-bottom: 0.5rem;
+  display: block;
 }
 
 .blocoDoTitulo {
@@ -36,10 +123,6 @@ h1, h2 {
   align-items: center;
   padding: 1.5rem;
   border-radius: 5px;
-}
-h1 {
-  font-size: clamp(2rem, 3vw, 3rem);
-  text-align: center;
 }
 
 .menuInicial {
@@ -78,7 +161,7 @@ h1 {
   transition: background-color 0.3s ease;
 }
 .imagem:hover {
-  background-color: #3e4a61;
+  background-color: var(--cor-hover-image);
 }
 .imagem img {
   max-height: 90%;
@@ -96,35 +179,19 @@ h1 {
   gap: 1rem;
   transition: background-color 0.2s ease;
 }
+
 .divisoesMenuInicial:hover {
   background-color: var(--cor-bloco)
 }
+
 .imangensdivmenuInicial {
   width: 80px;
   height: 80px;
   object-fit: contain;
 }
+
 .conteudotextomenuInicial {
   flex: 1;
-}
-
-h2 {
-  font-size: 1.6rem;
-  margin-bottom: 0.3rem;
-  color: var(--cor-destaque);
-}
-p {
-  font-size: 1.2rem;
-  color: var(--cor-texto-fraco);
-}
-
-a{
- font-size :1.2rem;
- color: var(--cor-link-fraco)
-}
-a:hover{
- color: var(--cor-link-fraco-hover)
-
 }
 
 .Imagensabilidades {
@@ -133,31 +200,8 @@ a:hover{
   margin-right: 0.3rem;
 }
 
-textarea {
-  padding: 1rem;
-  font-size: 1rem;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  resize: vertical;
-  font-family: Arial, sans-serif;
-  min-height: 150px;
-  max-width: 100%;
-  box-sizing: border-box;
-}
-textarea:focus {
-  border-color: var(--cor-destaque);
-  outline: none;
-}
-
-form label {
-  font-weight: bold;
-  color: var(--cor-texto);
-  margin-bottom: 0.5rem;
-  display: block;
-}
-
 .Bemail {
-  background-color: var(--cor-destaque);
+  background-color: var(--cor-botao);
   color: var(--cor-fundo);
   border: none;
   padding: 0.75rem 1.5rem;
@@ -171,32 +215,58 @@ form label {
   background-color: var(--cor-hover);
 }
 
-/* Menu de Projetos */
 .MenuProjetos {
   width: 100%;
   max-width: 1600px;
-  max-height: 80vh;
+  max-height: 100vh;
   background-color: var(--cor-secundaria);
-  overflow-y: auto;
+  overflow-y: scroll;
   visibility: hidden;
   position: relative;
-  padding: 2rem;
-  border-radius: 10px;
+  border-radius: 15px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
+
+
+.MenuProjetos::-webkit-scrollbar{
+  
+  width: 15px;
+
+}
+
+.MenuProjetos::-webkit-scrollbar-track{
+
+background-color: var(--cor-bloco)
+
+}
+
+.MenuProjetos::-webkit-scrollbar-thumb{
+border-radius: 20px;
+background-color: var(--li-hover)
+
+}
+
+.MenuProjetos::-webkit-scrollbar-thumb:hover{
+background-color: var(--scol-hover)
+
+}
+
 .listaProjetos {
   display: none;
   flex-direction: column;
+  max-width: 99%;
   gap: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
+
 .listaProjetos-li {
   border-radius: 12px;
-  background-color: var(--cor-bloco);
+  background-color: var(--cor-li);
   padding: 1rem;
   transition: background-color 0.2s ease;
 }
 .listaProjetos-li:hover {
-  background-color: #2e314d;
+  background-color: var(--li-hover);
   transform: scale(1.02);
 }
 .listaProjetos-a {
@@ -204,6 +274,13 @@ form label {
   text-decoration: none;
   color: var(--cor-destaque);
 }
+
+.listaProjetos-a:hover{
+
+color: var(--cor-destaque-hover);
+
+}
+
 .listaProjetos-p {
   font-size: 0.9rem;
   color: var(--cor-texto-fraco);
@@ -220,7 +297,7 @@ form label {
   border-radius: 10px;
   font-size: 14px;
   display: none;
-  z-index: 9999;
+  z-index: 1;
 }
 
 
