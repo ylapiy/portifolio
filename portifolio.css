@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans&display=swap');
 
+:root {
+  --cor-fundo: #1e1e2f;
+  --cor-secundaria: #2c2f48;
+  --cor-destaque: #f0b429;
+  --cor-hover: #d89e1f;
+  --cor-texto: #e5e7eb;
+  --cor-texto-fraco: #94a3b8;
+  --cor-link-fraco: #5f6f86;
+  --cor-link-fraco-hover: #546377;
+  --cor-bloco: #23263a;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,36 +19,37 @@
 }
 
 body {
-  background-color: #f4f4f5;
+  background-color: var(--cor-fundo);
   font-family: 'Open Sans', sans-serif;
-  color: #1e293b;
+  color: var(--cor-texto);
+}
+
+h1, h2 {
+  font-family: 'Merriweather', serif;
 }
 
 .blocoDoTitulo {
-  background-color: #1e293b;
-  color: #f1f5f9;
+  background-color: var(--cor-secundaria);
+  color: var(--cor-texto);
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  padding: 1.5rem;
   border-radius: 5px;
 }
 h1 {
-  font-size: clamp(1.8rem, 3vw, 3rem);
-  font-family: 'Merriweather', serif;
+  font-size: clamp(2rem, 3vw, 3rem);
   text-align: center;
 }
 
-
 .menuInicial {
-  background-color: #ffffff;
+  background-color: var(--cor-secundaria);
   width: 80vw;
-  min-width: 300px;
   max-width: 1600px;
   margin: 2rem auto;
   padding: 2rem;
   border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
   min-height: 90vh;
   display: flex;
   flex-direction: column;
@@ -44,32 +57,28 @@ h1 {
   gap: 1.5rem;
 }
 
-
 .barradeseleção {
   width: 100%;
-  height: 6rem;
-  background-color: #334155;
+  height: 5rem;
+  background-color: var(--cor-bloco);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  gap: 0.5rem;
   border-radius: 10px;
 }
+
 .imagem {
   flex: 1;
   height: 100%;
-  background-color: #334155;
+  background-color: transparent;
   border: none;
-  padding: 0.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: background-color 0.3s ease;
-  border-radius: 10px;
-  border: 1px solid #1e293b;
 }
 .imagem:hover {
-  background-color: #475569;
+  background-color: #3e4a61;
 }
 .imagem img {
   max-height: 90%;
@@ -80,51 +89,95 @@ h1 {
 .divisoesMenuInicial {
   display: flex;
   align-items: flex-start;
-  background-color: #e2e8f0;
-  min-height: 12rem;
-  margin-bottom: 1rem;
+  background-color: var(--cor-secundaria);
   padding: 2rem 1rem;
-  border-bottom: 2px solid #cbd5e1;
-  position: relative;
+  border-radius: 15px;
   width: 100%;
-  border-radius: 20px;
-  transition: transform 0.2s ease;
+  gap: 1rem;
+  transition: background-color 0.2s ease;
 }
 .divisoesMenuInicial:hover {
-  transform: scale(1.02);
-  background-color: #cbd5e1;
+  background-color: var(--cor-bloco)
 }
 .imangensdivmenuInicial {
   width: 80px;
   height: 80px;
-  flex-shrink: 0;
-  object-fit: cover;
+  object-fit: contain;
 }
 .conteudotextomenuInicial {
-  margin-left: 1rem;
   flex: 1;
 }
+
 h2 {
-  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  font-size: 1.6rem;
   margin-bottom: 0.3rem;
-  font-family: 'Merriweather', serif;
+  color: var(--cor-destaque);
 }
 p {
-  font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+  font-size: 1.2rem;
+  color: var(--cor-texto-fraco);
+}
+
+a{
+ font-size :1.2rem;
+ color: var(--cor-link-fraco)
+}
+a:hover{
+ color: var(--cor-link-fraco-hover)
+
 }
 
 .Imagensabilidades {
   width: 40px;
   height: auto;
+  margin-right: 0.3rem;
 }
 
+textarea {
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  resize: vertical;
+  font-family: Arial, sans-serif;
+  min-height: 150px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+textarea:focus {
+  border-color: var(--cor-destaque);
+  outline: none;
+}
+
+form label {
+  font-weight: bold;
+  color: var(--cor-texto);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.Bemail {
+  background-color: var(--cor-destaque);
+  color: var(--cor-fundo);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.Bemail:hover {
+  background-color: var(--cor-hover);
+}
+
+/* Menu de Projetos */
 .MenuProjetos {
   width: 100%;
   max-width: 1600px;
   max-height: 80vh;
-  background-color: #ffffff;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  background-color: var(--cor-secundaria);
+  overflow-y: auto;
   visibility: hidden;
   position: relative;
   padding: 2rem;
@@ -134,29 +187,42 @@ p {
 .listaProjetos {
   display: none;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 .listaProjetos-li {
-  border-radius: 20px;
-  list-style: none;
-  background-color: #f8fafc;
-  padding: 0.7rem;
-  border-bottom: 3px solid #cbd5e1;
+  border-radius: 12px;
+  background-color: var(--cor-bloco);
+  padding: 1rem;
   transition: background-color 0.2s ease;
 }
 .listaProjetos-li:hover {
-  background-color: #e2e8f0;
+  background-color: #2e314d;
   transform: scale(1.02);
 }
 .listaProjetos-a {
-  font-size: 1rem;
+  font-size: 1.1rem;
   text-decoration: none;
-  color: #1e293b;
+  color: var(--cor-destaque);
 }
 .listaProjetos-p {
   font-size: 0.9rem;
-  color: #475569;
+  color: var(--cor-texto-fraco);
 }
+
+.descricaoRepo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  max-width: 300px;
+  background-color: rgba(0, 0, 0, 0.85);
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+  display: none;
+  z-index: 9999;
+}
+
 
 @media (max-width: 768px) {
   .barradeseleção {
@@ -166,12 +232,8 @@ p {
   }
 
   .imagem {
-    flex: 1 0 30%;
+    flex: 1 0 45%;
     height: 3.5rem;
-  }
-
-  .blocoDoTitulo h1 {
-    font-size: 1.8rem;
   }
 
   .divisoesMenuInicial {
@@ -192,117 +254,18 @@ p {
   }
 
   h2 {
-    font-size: 2rem;
+    font-size: 1.4rem;
   }
 
   p {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
 
   .listaProjetos-a {
-  font-size: 0.8rem;
-  text-decoration: none;
-  color: #1e293b;
- } 
+    font-size: 1rem;
+  }
 
   .listaProjetos-p {
-  font-size: 1rem;
-  color: #475569;
-}
-textarea{
-
-box-sizing: ;
-
-
-}
-
-}
-
-.descricaoRepo {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    max-width: 300px;
-    background-color: rgba(0, 0, 0, 0.85);
-    color: white;
-    padding: 10px;
-    border-radius: 10px;
-    font-size: 14px;
-    display: none; /* Escondido até passar o mouse */
-    z-index: 9999;
-}
-
-.MenuSobreMim{
-
-  width: 100%;
-  max-width: 1600px;
-  max-height: 80vh;
-  background-color: #ffffff;
-  visibility: hidden;
-  display: none;
-  position: relative;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  flex-direction: column;
-
-}
-
-.divisoesMenumim{
-
-  flex-direction: column;
-  display: flex;
-  align-items: flex-start;
-  background-color: #e2e8f0;
-  min-height: 12rem;
-  margin-bottom: 1rem;
-  padding: 2rem 1rem;
-  border-bottom: 2px solid #cbd5e1;
-  position: relative;
-  width: 100%;
-  border-radius: 20px;
-  transition: transform 0.2s ease;
-  
-}
-
-form label {
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 0.5rem;
-}
-
-textarea:focus {
-  border-color: #1e293b;
-  outline: none;
-}
-
-
-textarea {
-  padding: 1rem;
-  font-size: 1rem;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  resize: vertical;
-  font-family: Arial, sans-serif;
-  min-height: 150px;
-  max-width: 70%;
-  box-sizing: border-box;
-
-}
-
-
-button.Bemail {
-  background-color: #1e293b;
-  color: #f1f5f9;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  font-size: 0.8rem;
-  font-weight: bold;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button.Bemail:hover {
-  background-color: #1e293b;
+    font-size: 0.9rem;
+  }
 }
