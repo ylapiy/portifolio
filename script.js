@@ -1,6 +1,7 @@
-    var temaClaro = false
+var temaClaro = false
+let timer = null;
 
-    document.getElementById('inversor').addEventListener('click', () => {
+document.getElementById('inversor').addEventListener('click', () => {
         document.body.classList.toggle('tema-claro-queima-olhos')
         const lua =  document.getElementById('lua')
         const sol = document.getElementById('sol')
@@ -23,8 +24,8 @@
         }
 
 
-    }) 
-    document.getElementById('butaoSobreMim').addEventListener('click', () => {
+}) 
+document.getElementById('butaoSobreMim').addEventListener('click', () => {
         document.querySelector('.MenuProjetos').style.visibility = 'hidden';
         document.querySelector('.MenuProjetos').style.visibility = 'none'
         document.querySelector('.listaProjetos').style.display = 'none';
@@ -37,8 +38,8 @@
         
 
 
-    })
-    document.getElementById('butaoProjetos').addEventListener('click', () => {
+})
+document.getElementById('butaoProjetos').addEventListener('click', () => {
         document.querySelectorAll('.divisoesMenuInicial').forEach(Elemento => {Elemento.style.visibility = 'hidden'});
         document.querySelectorAll('.divisoesMenuInicial').forEach(Elemento => {Elemento.style.display = 'none'});
        
@@ -49,21 +50,24 @@
         document.getElementById('titulo').textContent = ""
         escreverTextoProgresso('titulo','PROJETOS')
 
-    })
-    document.getElementById('email').addEventListener('click', () => {
+})
+document.getElementById('email').addEventListener('click', () => {
         document.getElementById('formemai').mensagem.value = "";
-    })
-    window.addEventListener('load', () => {
+})
+window.addEventListener('load', () => {
         document.getElementById('titulo').textContent = ""
         escreverTextoProgresso('titulo','YGOR JIVAGO LEAL FÉLIX')
-        
-    });
+        APIgitHub();
 
+        
+});
+
+async function APIgitHub(){
     
     const username = "ylapiy"; 
     const lista = document.getElementById("listaProjetos");
 
-    fetch(`https://api.github.com/users/${username}/repos?sort=updated`)
+    await fetch(`https://api.github.com/users/${username}/repos?sort=updated`)
 
       .then(response => response.json())
       .then(repos => {
@@ -99,8 +103,7 @@
       .catch(error => {
         console.error(error);
       });
-
- let timer = null;
+}
 
 function escreverTextoProgresso(elementoId, texto, velocidade = 80) {
     const elemento = document.getElementById(elementoId);
