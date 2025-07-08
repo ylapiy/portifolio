@@ -64,6 +64,11 @@ window.addEventListener('load', () => {
         
 });
 
+document.getElementById('baixar').addEventListener('click', () =>{
+    const link = document.getElementById('baixar')
+    link.href = "YgorJivago_LealFélix.pdf";
+})
+
 async function APIgitHub(){
     
     const username = "ylapiy"; 
